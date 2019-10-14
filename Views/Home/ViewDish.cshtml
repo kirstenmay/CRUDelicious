@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "View Dish Page";
+}
+
+<div class="row">
+    <div class="col-8 offset-2">
+        <div class="card text-center">
+        <div class="card-header">
+            Dish by @Model.Chef
+        </div>
+        <div class="card-body">
+            <h2 class="card-title">@Model.Name</h2>
+            <p class="card-text">@Model.Description</p>
+            <p>Calories : @Model.Calories</p>
+            <a href="/Home/EditDish/@Model.DishId" class="btn btn-outline-danger">Edit</a>
+        </div>
+        <div class="card-footer text-muted">
+            Stars: @Model.Tastiness
+        </div>
+    </div>
+    </div>
+</div>

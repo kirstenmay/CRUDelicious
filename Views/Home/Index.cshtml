@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to CRUDelicious</h1>
+</div>
+<div class="row">
+    <div class="col-10 offset-1">
+        <h1>Recent Dishes</h1>
+        <ul class="list-group list-group-flush">
+            @{
+                foreach(Dish dishes in Model)
+                {
+                    <li class="list-group-item"><a href="/Home/ViewDish/@dishes.DishId" >@dishes.Name</a> by @dishes.Chef</li>
+                }
+            }
+        </ul>
+    </div>
+</div>
